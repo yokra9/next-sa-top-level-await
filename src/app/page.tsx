@@ -1,11 +1,11 @@
 "use client";
 
-import { useFormState } from "react-dom";
+import { useActionState, JSX } from "react";
 
 import { action } from "../lib/actions";
 
-export default function Home() {
-  const [state, dispatch] = useFormState(action, 0);
+export default function Home(): JSX.Element {
+  const [state, dispatch] = useActionState(action, 0);
 
   return (
     <div>
